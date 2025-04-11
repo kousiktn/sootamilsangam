@@ -30,12 +30,17 @@ a:focus {
     text-decoration: none;
 }
 
+
+
+
+
+
 .btn.btn-custom {
     padding: 12px 20px;
     text-align: center; 
    font-size: 16px;
     font-weight: 500;
-    color: #777777;
+    color: #f6b476;
     border-radius: 0;
     border: 2px solid #FDBE33;
     box-shadow: inset 0 0 0 0 #FDBE33;
@@ -296,7 +301,7 @@ a:focus {
     .navbar {
         position: absolute;
         width: 100%;
-        top: 45px;
+        
         padding: 20px 60px;
         background: transparent !important;
         border-bottom: 1px solid rgba(255, 255, 255, .3);
@@ -528,6 +533,29 @@ a:focus {
     }
 }
 
+.border-image {
+    text-align: center; /* Center the image */
+    margin-top: -10px; /* Adjust spacing to overlap slightly */
+}
+
+.border-image img {
+    width: 100%; /* Make the image span the full width */
+    max-width: 1200px; /* Optional: Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+
+.border-design {
+    position: relative;
+    padding-bottom: 20px; /* Adjust padding as needed */
+    background: #fff; /* Background color inside the section */
+    border-bottom: 10px solid transparent; /* Apply border only to the bottom */
+    border-image-source: url('https://saulttourism.com/wp-content/uploads/2021/03/Bottom.png'); /* Border image */
+    border-image-slice: 30; /* Adjust this value based on the image */
+    border-image-repeat: round; /* Repeat the border image */
+    border-image-width: 10px; /* Adjust border width */
+}
 
 /*******************************/
 /******* Page Header CSS *******/
@@ -537,8 +565,8 @@ a:focus {
     margin-bottom: 45px;
     padding: 210px 0 90px 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(https://images.squarespace-cdn.com/content/v1/67e4ba3bb8fd0b66f48956d3/e3e180f3-212d-4f49-a015-237e529d3215/logo.png?format=1500w);
-    background-attachment: fixed;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../img/Canada-Day_Bridge-Fireworks.jpg");
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -624,7 +652,6 @@ a:focus {
 .section-header {
     position: relative;
     width: 100%;
-    max-width: 700px;
     margin: 0 auto 45px auto;
 }
 
@@ -1537,12 +1564,28 @@ a:focus {
     object-fit: cover;
 }
 
+.ms-4 {
+    padding-left: 10px;
+}
+
+.text-primary {
+    color: #f8be45 !important;
+}
+
+.p-5 {
+    padding: 1rem !important;
+}
+
+.mb-0{
+    font-size: 1.20rem;
+}
+
 .contact .contact-form {
     position: relative;
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
-    margin-top: -220px;
+    
     padding: 30px;
     background: #f3f6ff;
 }
@@ -2152,3 +2195,177 @@ a:focus {
         text-align: center;
     }
 }
+
+
+.portfolio .portfolio-filters {
+    padding: 0;
+    margin: 0 auto 20px auto;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .portfolio .portfolio-filters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 10px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .portfolio .portfolio-filters li:hover,
+  .portfolio .portfolio-filters li.filter-active {
+    color: var(--accent-color);
+  }
+  
+  .portfolio .portfolio-filters li:first-child {
+    margin-left: 0;
+  }
+  
+  .portfolio .portfolio-filters li:last-child {
+    margin-right: 0;
+  }
+  
+  @media (max-width: 575px) {
+    .portfolio .portfolio-filters li {
+      font-size: 14px;
+      margin: 0 5px;
+    }
+  }
+  
+  .portfolio .portfolio-item {
+    position: relative;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info {
+    background-color: color-mix(in srgb, var(--surface-color), transparent 10%);
+    opacity: 0;
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 0;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    padding: 15px;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 50px;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info p {
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    font-size: 14px;
+    margin-bottom: 0;
+    padding-right: 50px;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info .preview-link,
+  .portfolio .portfolio-item .portfolio-info .details-link {
+    position: absolute;
+    right: 50px;
+    font-size: 24px;
+    top: calc(50% - 14px);
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    transition: 0.3s;
+    line-height: 0;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info .preview-link:hover,
+  .portfolio .portfolio-item .portfolio-info .details-link:hover {
+    color: var(--accent-color);
+  }
+  
+  .portfolio .portfolio-item .portfolio-info .details-link {
+    right: 14px;
+    font-size: 28px;
+  }
+  
+  .portfolio .portfolio-item:hover .portfolio-info {
+    opacity: 1;
+    bottom: 20px;
+  }
+
+  
+  /*** Service Start ***/
+.service .nav .nav-item {
+    width: 75%;
+    border: 1px solid var(--bs-primary);
+    background: var(--bs-light);
+}
+
+.service .nav .nav-item a {
+    display: flex;
+    justify-content: center;
+}
+
+
+.owl-stage-outer {
+    margin-right: -1px;
+}
+.service .nav-item a.active {
+    background: var(--bs-primary);
+}
+
+.service .nav-item a span {
+    color: var(--bs-dark);
+}
+
+.service .nav-item a.active span {
+    color: var(--bs-white);
+}
+
+.service-carousel .owl-nav .owl-prev,
+.service-carousel .owl-nav .owl-next {
+    position: absolute;
+    padding: 10px 35px;
+    border: 1px solid var(--bs-primary);
+    color: var(--bs-dark);
+    background: var(--bs-light);
+    transition: 0.5s;
+}
+
+.service-carousel .owl-nav .owl-prev:hover,
+.service-carousel .owl-nav .owl-next:hover {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+@media (min-width: 992px) {
+    .service-carousel .owl-nav .owl-prev {
+        top: 0;
+        left: -115px;
+    }
+    
+    .service-carousel .owl-nav .owl-next {
+        bottom: 0;
+        left: -115px;
+    }
+}
+
+@media (max-width: 991px) {
+    .owl-stage-outer {
+        margin-bottom: 70px;
+    }
+    .service-carousel .owl-nav .owl-prev {
+        bottom: -70px;
+        left: 0;
+    }
+
+    .service-carousel .owl-nav .owl-next {
+        bottom: -70px;
+        right: 0;
+    }
+
+    .service .nav {
+        display: flex;
+        justify-content: center;
+    }
+}
+/*** Service End ***/
