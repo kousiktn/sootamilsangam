@@ -342,11 +342,7 @@ a:focus {
         padding: 15px;
         /*background: #20212B !important;*/
         /*position: fixed;*/
-        top: 0;
-        width: 100%;
-        z-index: 9999; /* Ensure it stays above other elements */
         background: #20212B !important; /* Ensure the background is visible */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visibility */
     }
 
     .navbar a.nav-link {
@@ -387,7 +383,7 @@ a:focus {
 
 .carousel .carousel-img {
     position: relative;
-    width: 100%;
+    width: 116%;
     height: 100%;
   min-height: 300px;
     text-align: right;
