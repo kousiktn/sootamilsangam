@@ -60,7 +60,7 @@ a:focus {
 }
 
 .container-fluid {
-    max-width: 1366px;
+    /*max-width: 1366px;*/
 }
 
 [class^="flaticon-"]:before,
