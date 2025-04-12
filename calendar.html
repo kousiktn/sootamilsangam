@@ -42,10 +42,10 @@
                 <div class="navbar-nav ml-auto">
                     <a href="index.html" class="nav-item nav-link">Home</a>
                     <!--<a href="about.html" class="nav-item nav-link">About</a>-->
-                    <a href="event.html" class="nav-item nav-link active">Events</a>
+                    <a href="event.html" class="nav-item nav-link">Events</a>
                     <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                     <a href="team.html" class="nav-item nav-link">Committee</a>
-                    <a href="calendar.html" class="nav-item nav-link">Calendar</a>
+                    <a href="calendar.html" class="nav-item nav-link active">Calendar</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
@@ -68,14 +68,17 @@
     <!-- Event Start -->
     <div class="calendar">
         <div class="container">
-            <div>
-                <button id="prev">Previous</button>
-                <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
-                <button id="next">Next</button>
-            </div>
+            <!--<div>-->
+                <!--<button id="prev">Previous</button>-->
+                <a id="prev" class="previous" style="color: #20212b;">&laquo; Previous</a>
 
-            <canvas id="pdf-canvas"></canvas>
+                <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+                <!--<button id="next">Next</button>-->
+                <a id="next" class="next" style="color: #20212b;">Next &raquo;</a>
+            <!--</div>-->
         </div>
+        <div class="container"> <canvas id="pdf-canvas"></canvas></div>
+        
     </div>
     <!-- Event End -->
 
@@ -126,6 +129,42 @@
         </div>
     </div>
     <!-- Footer End -->
+
+    <style>
+        .container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Optional: Adjusts layout direction */
+    text-align: center; /* Centers text inside the container */
+    height: 100%; /* Optional: Adjust height if needed */
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f8be45;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+    </style>
 
     <!-- Back to top button -->
     <a href="event.html#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
