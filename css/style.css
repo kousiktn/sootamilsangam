@@ -9,10 +9,10 @@ body {
 }
 
 h1,
-h2, 
-h3, 
+h2,
+h3,
 h4,
-h5, 
+h5,
 h6 {
     color: #4a4c70;
 }
@@ -37,8 +37,8 @@ a:focus {
 
 .btn.btn-custom {
     padding: 12px 20px;
-    text-align: center; 
-   font-size: 16px;
+    text-align: center;
+    font-size: 16px;
     font-weight: 500;
     color: #f6b476;
     border-radius: 0;
@@ -63,8 +63,10 @@ a:focus {
     max-width: 1366px;
 }
 
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
     font-size: inherit;
     margin-left: 0;
 }
@@ -111,13 +113,23 @@ a:focus {
 }
 
 @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .back-to-top {
@@ -247,7 +259,7 @@ a:focus {
 
 @media (max-width: 844px) {
     .navbar-brand {
-        font-size: 20px; 
+        font-size: 20px;
     }
 }
 
@@ -301,23 +313,23 @@ a:focus {
     .navbar {
         position: absolute;
         width: 100%;
-        
+
         padding: 20px 60px;
         background: transparent !important;
         border-bottom: 1px solid rgba(255, 255, 255, .3);
         z-index: 9;
     }
-    
+
     .navbar.nav-sticky {
         padding: 10px 60px;
         background: #20212B !important;
         border-bottom: none;
     }
-    
+
     .page .navbar {
         background: #20212B !important;
     }
-    
+
     .navbar a.nav-link {
         padding: 8px 15px;
         font-size: 16px;
@@ -325,16 +337,16 @@ a:focus {
     }
 }
 
-@media (max-width: 991.98px) {   
+@media (max-width: 991.98px) {
     .navbar {
         padding: 15px;
         background: #20212B !important;
     }
-    
+
     .navbar a.nav-link {
         padding: 5px;
     }
-    
+
     .navbar .dropdown-menu {
         box-shadow: none;
     }
@@ -497,11 +509,11 @@ a:focus {
     .carousel .carousel-text h1 {
         font-size: 35px;
     }
-    
+
     .carousel .carousel-text p {
         font-size: 16px;
     }
-    
+
     .carousel .carousel-text .btn {
         padding: 12px 30px;
         font-size: 15px;
@@ -513,7 +525,7 @@ a:focus {
     .carousel .carousel-text h1 {
         font-size: 30px;
     }
-    
+
     .carousel .carousel-text .btn {
         padding: 10px 25px;
         font-size: 15px;
@@ -525,7 +537,7 @@ a:focus {
     .carousel .carousel-text h1 {
         font-size: 25px;
     }
-    
+
     .carousel .carousel-text .btn {
         padding: 8px 20px;
         font-size: 14px;
@@ -534,27 +546,39 @@ a:focus {
 }
 
 .border-image {
-    text-align: center; /* Center the image */
-    margin-top: -10px; /* Adjust spacing to overlap slightly */
+    text-align: center;
+    /* Center the image */
+    margin-top: -10px;
+    /* Adjust spacing to overlap slightly */
 }
 
 .border-image img {
-    width: 100%; /* Make the image span the full width */
-    max-width: 1200px; /* Optional: Limit the maximum width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    /* Make the image span the full width */
+    max-width: 1200px;
+    /* Optional: Limit the maximum width */
+    height: auto;
+    /* Maintain aspect ratio */
     display: block;
 }
 
 
 .border-design {
     position: relative;
-    padding-bottom: 20px; /* Adjust padding as needed */
-    background: #fff; /* Background color inside the section */
-    border-bottom: 10px solid transparent; /* Apply border only to the bottom */
-    border-image-source: url('https://saulttourism.com/wp-content/uploads/2021/03/Bottom.png'); /* Border image */
-    border-image-slice: 30; /* Adjust this value based on the image */
-    border-image-repeat: round; /* Repeat the border image */
-    border-image-width: 10px; /* Adjust border width */
+    padding-bottom: 20px;
+    /* Adjust padding as needed */
+    background: #fff;
+    /* Background color inside the section */
+    border-bottom: 10px solid transparent;
+    /* Apply border only to the bottom */
+    border-image-source: url('https://saulttourism.com/wp-content/uploads/2021/03/Bottom.png');
+    /* Border image */
+    border-image-slice: 30;
+    /* Adjust this value based on the image */
+    border-image-repeat: round;
+    /* Repeat the border image */
+    border-image-width: 10px;
+    /* Adjust border width */
 }
 
 /*******************************/
@@ -566,7 +590,7 @@ a:focus {
     padding: 210px 0 90px 0;
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../img/Canada-Day_Bridge-Fireworks.jpg");
-    
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -621,11 +645,11 @@ a:focus {
     .page-header {
         padding: 60px 0;
     }
-    
+
     .page-header h2 {
         font-size: 45px;
     }
-    
+
     .page-header a {
         font-size: 20px;
     }
@@ -635,11 +659,11 @@ a:focus {
     .page-header {
         padding: 45px 0;
     }
-    
+
     .page-header h2 {
         font-size: 35px;
     }
-    
+
     .page-header a {
         font-size: 18px;
     }
@@ -1329,13 +1353,16 @@ a:focus {
 }
 
 
-.calendar {
-    margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
+#pdf-canvas {
+    max-width: 100%;
+    height: auto !important;
 }
 
+.calendar {
+    overflow-x: auto;
+    /* Allows scrolling horizontally if needed */
+    width: 100%;
+}
 
 /*******************************/
 /********** Event CSS **********/
@@ -1428,29 +1455,29 @@ a:focus {
     .event .event-content {
         flex-direction: column;
     }
-    
+
     .event .event-meta {
         flex-direction: row;
     }
-    
+
     .event .event-meta p {
         font-size: 14px;
         padding-right: 7px;
     }
-    
+
     .event .event-meta p:last-child {
         border-bottom: 1px solid rgba(0, 0, 0, .15);
     }
-    
+
     .event .event-meta i {
         width: 18px;
     }
-    
+
     .event .event-text {
         margin: 0;
         padding: 0;
     }
-    
+
     .event .event-text::before,
     .event .event-text::after {
         display: none;
@@ -1584,7 +1611,7 @@ a:focus {
     padding: 1rem !important;
 }
 
-.mb-0{
+.mb-0 {
     font-size: 1.20rem;
 }
 
@@ -1593,7 +1620,7 @@ a:focus {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
-    
+
     padding: 30px;
     background: #f3f6ff;
 }
@@ -2015,11 +2042,11 @@ a:focus {
 }
 
 .sidebar .category-widget ul li {
-    margin: 0 0 12px 22px; 
+    margin: 0 0 12px 22px;
 }
 
 .sidebar .category-widget ul li:last-child {
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
 .sidebar .category-widget ul li a {
@@ -2197,6 +2224,7 @@ a:focus {
 }
 
 @media (max-width: 767.98px) {
+
     .footer .copyright p,
     .footer .copyright .col-md-6:last-child p {
         margin: 5px 0;
@@ -2210,9 +2238,9 @@ a:focus {
     margin: 0 auto 20px auto;
     list-style: none;
     text-align: center;
-  }
-  
-  .portfolio .portfolio-filters li {
+}
+
+.portfolio .portfolio-filters li {
     cursor: pointer;
     display: inline-block;
     padding: 0;
@@ -2223,33 +2251,33 @@ a:focus {
     text-transform: uppercase;
     margin-bottom: 5px;
     transition: all 0.3s ease-in-out;
-  }
-  
-  .portfolio .portfolio-filters li:hover,
-  .portfolio .portfolio-filters li.filter-active {
+}
+
+.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li.filter-active {
     color: var(--accent-color);
-  }
-  
-  .portfolio .portfolio-filters li:first-child {
+}
+
+.portfolio .portfolio-filters li:first-child {
     margin-left: 0;
-  }
-  
-  .portfolio .portfolio-filters li:last-child {
+}
+
+.portfolio .portfolio-filters li:last-child {
     margin-right: 0;
-  }
-  
-  @media (max-width: 575px) {
+}
+
+@media (max-width: 575px) {
     .portfolio .portfolio-filters li {
-      font-size: 14px;
-      margin: 0 5px;
+        font-size: 14px;
+        margin: 0 5px;
     }
-  }
-  
-  .portfolio .portfolio-item {
+}
+
+.portfolio .portfolio-item {
     position: relative;
-  }
-  
-  .portfolio .portfolio-item .portfolio-info {
+}
+
+.portfolio .portfolio-item .portfolio-info {
     background-color: color-mix(in srgb, var(--surface-color), transparent 10%);
     opacity: 0;
     position: absolute;
@@ -2259,23 +2287,23 @@ a:focus {
     z-index: 3;
     transition: all ease-in-out 0.3s;
     padding: 15px;
-  }
-  
-  .portfolio .portfolio-item .portfolio-info h4 {
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
     font-size: 18px;
     font-weight: 600;
     padding-right: 50px;
-  }
-  
-  .portfolio .portfolio-item .portfolio-info p {
+}
+
+.portfolio .portfolio-item .portfolio-info p {
     color: color-mix(in srgb, var(--default-color), transparent 30%);
     font-size: 14px;
     margin-bottom: 0;
     padding-right: 50px;
-  }
-  
-  .portfolio .portfolio-item .portfolio-info .preview-link,
-  .portfolio .portfolio-item .portfolio-info .details-link {
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link,
+.portfolio .portfolio-item .portfolio-info .details-link {
     position: absolute;
     right: 50px;
     font-size: 24px;
@@ -2283,25 +2311,25 @@ a:focus {
     color: color-mix(in srgb, var(--default-color), transparent 30%);
     transition: 0.3s;
     line-height: 0;
-  }
-  
-  .portfolio .portfolio-item .portfolio-info .preview-link:hover,
-  .portfolio .portfolio-item .portfolio-info .details-link:hover {
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link:hover,
+.portfolio .portfolio-item .portfolio-info .details-link:hover {
     color: var(--accent-color);
-  }
-  
-  .portfolio .portfolio-item .portfolio-info .details-link {
+}
+
+.portfolio .portfolio-item .portfolio-info .details-link {
     right: 14px;
     font-size: 28px;
-  }
-  
-  .portfolio .portfolio-item:hover .portfolio-info {
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
     opacity: 1;
     bottom: 20px;
-  }
+}
 
-  
-  /*** Service Start ***/
+
+/*** Service Start ***/
 .service .nav .nav-item {
     width: 75%;
     border: 1px solid var(--bs-primary);
@@ -2317,6 +2345,7 @@ a:focus {
 .owl-stage-outer {
     margin-right: -1px;
 }
+
 .service .nav-item a.active {
     background: var(--bs-primary);
 }
@@ -2350,7 +2379,7 @@ a:focus {
         top: 0;
         left: -115px;
     }
-    
+
     .service-carousel .owl-nav .owl-next {
         bottom: 0;
         left: -115px;
@@ -2361,6 +2390,7 @@ a:focus {
     .owl-stage-outer {
         margin-bottom: 70px;
     }
+
     .service-carousel .owl-nav .owl-prev {
         bottom: -70px;
         left: 0;
@@ -2376,4 +2406,5 @@ a:focus {
         justify-content: center;
     }
 }
+
 /*** Service End ***/
