@@ -145,7 +145,7 @@
                         <p class="help-block text-danger"></p>
                     </div>
                     <div>
-                        <button class="btn btn-custom" type="submit" id="sendMessageButton">Send Message</button>
+                        <button class="btn btn-custom" onclick="sendMail(event)" type="submit" id="sendMessageButton">Send Message</button>
                     </div>
                 </form>
             </div>
@@ -156,44 +156,84 @@
 
 
 
-     <!-- Footer Start -->
-     <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-contact">
-                        <h2>Our Head Office</h2>
-                        <p><i class="fa fa-map-marker-alt"></i>879 Lake Street, Sault Ste. Marie, ON P6B 6K1</p>
-                        <p><i class="fa fa-phone-alt"></i>+1 514 709-7779</p>
-                        <p><i class="fa fa-envelope"></i>sootamilsangam@gmail.com</p>
-                        <div class="footer-social">
-                            <a class="btn btn-custom" target="_blank" href="https://youtube.com/@sootamilsangam?si=XOzJoKVJZQ7N-Hrr"><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-custom" target="_blank" href="https://www.instagram.com/soo.tamilsangam?igsh=Nnc2aHZobnphdzc3"><i class="fab fa-instagram"></i></a>
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-contact">
+                            <h2>Our Head Office</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>879 Lake Street, Sault Ste. Marie, ON P6B 6K1</p>
+                            <p><i class="fa fa-phone-alt"></i>+1 514 709-7779</p>
+                            <p><i class="fa fa-envelope"></i>sootamilsangam@gmail.com</p>
+                            <div class="footer-social">
+                                <a class="btn btn-custom" target="_blank" href="https://youtube.com/@sootamilsangam?si=XOzJoKVJZQ7N-Hrr"><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-custom" target="_blank" href="https://www.instagram.com/soo.tamilsangam?igsh=Nnc2aHZobnphdzc3"><i class="fab fa-instagram"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-link">
-                        <h2>Popular Links</h2>
-                        <a href="index.html">About Us</a>
-                        <a href="event.html">Upcoming Events</a>
-                        <a href="calendar.html">Calendar</a>
-                        <a href="contact.html">Contact Us</a>
-                        
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Popular Links</h2>
+                            <a href="index.html">About Us</a>
+                            <a href="event.html">Upcoming Events</a>
+                            <a href="calendar.html">Calendar</a>
+                            <a href="contact.html">Contact Us</a>
+                            
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-newsletter">
-                        <h2>Member</h2>
-                        <form>
-                            <button class="btn btn-custom">Become Memeber</button>
-                        </form>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-newsletter">
+                            <h2>Member</h2>
+                            <form>
+                                <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfoyhnDk7xyvdnsnh3c27khcg8YSJO1PWPMAtKpB3XVVmiThw/viewform?usp=dialog', '_blank')" class="btn btn-custom">Become Memeber</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer End -->
+        <!-- Footer End -->
+
+           <!--Email Send Contact Form-->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script>
+        (function () {
+            emailjs.init({
+                publicKey: "0PCpobfxhzJzNceOl",
+            });
+        })();
+    </script>
+    <script src="https://sootamilsangam.s3.us-east-2.amazonaws.com/mail/script.js"></script>
+
+    <script>
+        function sendMail(event) {
+            console.log("sendMail function triggered");
+            event.preventDefault(); // Prevent the default form submission behavior
+            let parms = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value,
+            }
+
+            // Debugging logs
+            console.log("Name:", name);
+            console.log("Email:", email);
+            console.log("Subject:", subject);
+            console.log("Message:", message);
+
+            emailjs.send("service_couc239", "template_cii52ea", parms).then(function (response) {
+                console.log("SUCCESS!", response.status, response.text);
+                alert("Email sent successfully!");
+            },
+                function (error) {
+                    console.log("FAILED...", error);
+                    alert("Failed to send email. Please try again.");
+                });
+        }
+    </script>
 
     <!-- Back to top button -->
     <a href="contact.html#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>

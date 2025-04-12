@@ -174,13 +174,13 @@
                     <div class="about-tab">
                         <ul class="nav nav-pills nav-justified">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="pill" href="index.html#tab-content-1">About</a>
+                                <a class="nav-link active" data-toggle="pill" href="#tab-content-1">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="index.html#tab-content-2">Mission</a>
+                                <a class="nav-link" data-toggle="pill" href="#tab-content-2">Mission</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="index.html#tab-content-3">Vision</a>
+                                <a class="nav-link" data-toggle="pill" href="#tab-content-3">Vision</a>
                             </li>
                         </ul>
 
@@ -895,7 +895,7 @@
                     <div class="footer-newsletter">
                         <h2>Member</h2>
                         <form>
-                            <button class="btn btn-custom">Become Memeber</button>
+                            <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfoyhnDk7xyvdnsnh3c27khcg8YSJO1PWPMAtKpB3XVVmiThw/viewform?usp=dialog', '_blank')" class="btn btn-custom">Become Memeber</button>
                         </form>
                     </div>
                 </div>
@@ -929,45 +929,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <!--Email Send Contact Form-->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script>
-        (function () {
-            emailjs.init({
-                publicKey: "BnV-NwIvHMiz1KSlI",
-            });
-        })();
-    </script>
-    <script src="https://sootamilsangam.s3.us-east-2.amazonaws.com/mail/script.js"></script>
-
-    <script>
-        function sendMail(event) {
-            console.log("sendMail function triggered");
-            event.preventDefault(); // Prevent the default form submission behavior
-            let parms = {
-                name: document.getElementById("name").value,
-                email: document.getElementById("email").value,
-                subject: document.getElementById("subject").value,
-                message: document.getElementById("message").value,
-            }
-
-            // Debugging logs
-            console.log("Name:", name);
-            console.log("Email:", email);
-            console.log("Subject:", subject);
-            console.log("Message:", message);
-
-            emailjs.send("service_03sv0pf", "template_7nr84jo", parms).then(function (response) {
-                console.log("SUCCESS!", response.status, response.text);
-                alert("Email sent successfully!");
-            },
-                function (error) {
-                    console.log("FAILED...", error);
-                    alert("Failed to send email. Please try again.");
-                });
-        }
-    </script>
+ 
 </body>
 
 </html>
